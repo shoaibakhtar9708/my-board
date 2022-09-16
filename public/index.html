@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>openboard</title>
+</head>
+
+<body>
+
+    <div class="options-cont">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="tools-cont scale-tools">
+        <p><i class="fa-solid fa-pencil"></i></p>
+        <p><i class="fa-solid fa-eraser"></i></p>
+        <p><i class="fa-solid fa-download download"></i></p>
+        <p><i class="fa-solid fa-upload upload"></i></p>
+        <p><i class="fa-solid fa-bookmark sticky"></i></p>
+        <p><i class="fa-solid fa-rotate-left undo"></i></p>
+        <p><i class="fa-solid fa-rotate-right redo"></i></p>
+        <p><i class="fa-solid fa-trash clear"></i></p>
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" name="" id="" min="1" max="10" value="3" class="pencil-width">
+        </div>
+
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" name="" id="" min="2" max="30" value="3" class="eraser-width">
+        </div>
+    </div>
+
+    <!-- <div class="sticky-cont">
+        
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+    </div> -->
+
+
+    <canvas>
+
+    </canvas>
+
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+        integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+        crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+
+</body>
+
+</html>
